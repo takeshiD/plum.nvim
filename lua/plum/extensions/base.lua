@@ -21,7 +21,7 @@ function M.get(opts, t)
         CursorIM        = { fg = t.bg,        bg = t.fg },
         CursorColumn    = { bg = t.cursorline },
         CursorLine      = { bg = t.cursorline },
-        CursorLineNr    = { fg = t.pink,      bold = true },
+        CursorLineNr    = { fg = util.blend(t.fg_muted, t.bg, 0.65),      bold = true },
 
         Directory       = { fg = t.blue },
         EndOfBuffer     = { fg = util.blend(t.bg_float, t.fg_subtle, 0.6) },
