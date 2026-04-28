@@ -33,16 +33,16 @@ local M = {}
 M.dark = {
     -- base
     -- RGB の B チャンネルを R と近づけることで紫被りを抑え、ほぼ純黒に
-    bg         = "#0D0C0E", -- Abyss Black      R13 G12 B14: ほぼ純黒・僅かな紫下地
+    bg         = "#0A0101", -- Abyss Black      R13 G12 B14: ほぼ純黒・僅かな紫下地
     bg_alt     = "#151318", -- Ink Dark         R21 G19 B24: サイドバー・分割ペイン
     bg_float   = "#1D1B22", -- Deep Dark        R29 G27 B34: フロート・ポップアップ
     fg         = "#F9F5FF", -- Frost White       ほぼ純白・クール
     fg_muted   = "#C4B4E2", -- Pale Violet       非アクティブ
     fg_subtle  = "#7A6890", -- Dusk Violet       控えめテキスト
-    selection  = "#2A1228", -- Plum Wine Dark    R42 G18 B40: 均衡のとれたダークプラム
-    cursorline = "#141218", -- Shadow Line       R20 G18 B24: 控えめなカーソル行
+    selection  = "#2A2A2A", -- Plum Wine Dark    R42 G18 B40: 均衡のとれたダークプラム
+    cursorline = "#02160B", -- Shadow Line       R20 G18 B24: 控えめなカーソル行
     border     = "#8B2060", -- Plum Wine         ウィンドウ枠
-    comment    = "#7C6587", -- Smoke Mauve       コメント
+    comment    = "#8D8282", -- Smoke Mauve       コメント
     -- accents (hue order: 28° → 42° → 145° → 172° → 180° → 210° → 275° → 330° → 340° → 357°)
     orange     = "#FFA020", -- Plum Flesh        28°  果肉オレンジ
     yellow     = "#FFD838", -- Flesh Gold        42°  果肉ゴールド
