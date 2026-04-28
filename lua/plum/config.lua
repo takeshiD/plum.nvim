@@ -27,6 +27,7 @@ local M = {}
 ---@field indentblankline? boolean
 ---@field notify? boolean
 ---@field treesitter? boolean
+---@field neotree? boolean
 
 ---@class plum.Config
 ---@field transparent? boolean
@@ -63,6 +64,7 @@ local defaults = {
         indentblankline = true,
         notify         = true,
         treesitter     = true,
+        neotree        = true,
     },
 }
 

@@ -114,6 +114,7 @@ require("plum").setup({
         indentblankline = true,
         notify         = true,
         treesitter     = true,
+        neotree        = true,
         -- Disable all extensions except specific ones:
         -- default = false,
         -- telescope = true,
@@ -160,6 +161,7 @@ vim.api.nvim_create_autocmd("User", {
 | indent-blankline.nvim | `indentblankline` |
 | nvim-notify | `notify` |
 | nvim-treesitter | `treesitter` |
+| neo-tree.nvim | `neotree` |
 
 ## License
 
