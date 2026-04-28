@@ -61,8 +61,9 @@ function M.get(opts, t)
         ["@type.qualifier"]                 = { fg = t.purple, italic = true },
 
         -- ── Namespaces & Modules ───────────────────────────────────────────
-        ["@module"]                         = { fg = t.pink_bright },
-        ["@module.builtin"]                 = { fg = t.pink_bright, italic = true },
+        -- ["@module"]                         = { fg = t.pink_bright },
+        ["@module"]                         = { fg = t.orange },
+        ["@module.builtin"]                 = { fg = t.yellow, italic = true },
         ["@namespace"]                      = { link = "Include" },
         ["@label"]                          = { link = "Label" },
 

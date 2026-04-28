@@ -64,7 +64,7 @@ function M.get(opts, t)
         SpellLocal      = { sp = t.blue,      undercurl = true },
         SpellRare       = { sp = t.purple,    undercurl = true },
 
-        StatusLine      = { fg = t.fg,        bg = t.bg_alt },
+        StatusLine      = { fg = t.yellow,        bg = t.bg_alt },
         StatusLineNC    = { fg = t.fg_subtle, bg = t.bg_alt },
 
         TabLine         = { fg = t.fg_subtle, bg = t.bg_alt },
