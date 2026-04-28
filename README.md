@@ -2,30 +2,15 @@
 
 A high-contrast Neovim colorscheme inspired by the vivid colors of the **Japanese plum (すもも)** — the pink-red skin, orange-yellow flesh, and vivid green leaves.
 
+<div align="center">
+  <h3>plum-dark</h3><img src="assets/plum-dark.png" alt="plum-dark" style="border-radius:5%" />
+  <h3>plum-light</h3><img src="assets/plum-light.png" alt="plum-light" style="border-radius:5%" />
+</div>
+
 ## Variants
 
-| Variant | Background | Character |
-|---------|-----------|-----------|
-| `plum-dark` | Near-black (`#0D0C0E`) | Full-chroma accents, WCAG AAA contrast |
-| `plum-light` | Warm parchment (`#F7F2E2`) | Darkened accents, WCAG AA contrast |
-
-## Color palette
-
-Colors are derived from the plum's natural hues and organized by color theory:
-
-| Role | Dark | Light | Hue | Source |
-|------|------|-------|-----|--------|
-| `pink` | `#FF3070` | `#C0124A` | 340° | Plum skin (primary) |
-| `plum` | `#E03080` | `#8A1050` | 330° | Purple-red skin |
-| `purple` | `#B060FF` | `#6018CC` | 275° | Triad |
-| `blue` | `#48A8FF` | `#1840D8` | 210° | Triad |
-| `cyan` | `#00E5E5` | `#007888` | 180° | Complement of pink |
-| `jade` | `#18CDB5` | `#0A7870` | 172° | Complement family |
-| `green` | `#35E888` | `#0A8840` | 145° | Plum leaf |
-| `yellow` | `#FFD838` | `#9A6400` | 42° | Plum flesh |
-| `orange` | `#FFA020` | `#B85800` | 28° | Plum flesh |
-| `red` | `#FF2040` | `#C00830` | 357° | Error (pure red) |
-
+- `plum-dark`
+- `plum-light`
 ## Requirements
 
 - Neovim 0.9+
@@ -62,9 +47,6 @@ Call `setup()` before applying the colorscheme. All options are optional.
 
 ```lua
 require("plum").setup({
-    -- "dark" | "light" | "auto" (follows vim.o.background)
-    variant = "dark",
-
     -- Replace bg with "NONE" for transparent backgrounds
     transparent = false,
 
@@ -162,6 +144,21 @@ vim.api.nvim_create_autocmd("User", {
 | nvim-notify | `notify` |
 | nvim-treesitter | `treesitter` |
 | neo-tree.nvim | `neotree` |
+
+## lualine support
+
+`plum.nvim` also ships `lualine` themes for both variants:
+
+- `plum-dark`
+- `plum-light`
+
+```lua
+require("lualine").setup({
+    options = {
+        theme = "plum-dark",
+    },
+})
+```
 
 ## License
 
