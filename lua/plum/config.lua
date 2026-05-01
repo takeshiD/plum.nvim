@@ -15,7 +15,7 @@ local M = {}
 ---@alias plum.Variant "dark"|"light"|"auto"
 
 ---@class plum.Extensions
----@field default? boolean  全拡張を一括で on/off する初期値
+---@field default? boolean
 ---@field telescope? boolean
 ---@field gitsigns? boolean
 ---@field cmp? boolean
@@ -43,8 +43,8 @@ local M = {}
 ---@field extensions? plum.Extensions
 local defaults = {
     transparent       = false,
-    variant           = "dark",   -- "dark" | "light" | "auto"
-    saturation        = 1,        -- 0–1、彩度スケール
+    variant           = "auto",   -- "dark" | "light" | "auto"
+    saturation        = 1,
     ---@diagnostic disable-next-line: missing-fields
     colors            = {},
     highlights        = {},
@@ -75,7 +75,6 @@ M.options = {}
 function M.setup(options)
     options = options or {}
 
-    -- extensions.default で全拡張を一括 on/off できる
     if options.extensions and options.extensions.default ~= nil then
         local default_val = options.extensions.default
         local user_ext = vim.deepcopy(options.extensions)

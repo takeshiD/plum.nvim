@@ -5,14 +5,27 @@ local util = require("plum.util")
 local M = {}
 
 ---@param variant? plum.Variant
+---@return "dark"|"light"
+local function resolve_variant(variant)
+	local opts = config.options
+	local selected = variant or opts.variant
+
+	if selected == "auto" then
+		return vim.o.background == "light" and "light" or "dark"
+	end
+
+	return selected
+end
+
+---@param variant? plum.Variant
 function M.load(variant)
-	util.load(theme.setup(variant))
+	local resolved = resolve_variant(variant)
+	util.load(theme.setup(variant), "plum-" .. resolved)
 end
 
 M.setup = config.setup
 M.colorscheme = M.load
 
--- :PlumToggleMode — dark ↔ light をトグル（auto 時は vim.o.background で切替）
 vim.api.nvim_create_user_command("PlumToggleMode", function()
 	local opts = vim.g.plum_opts or config.options
 	if opts.variant == "auto" then
@@ -26,7 +39,6 @@ vim.api.nvim_create_user_command("PlumToggleMode", function()
 	vim.api.nvim_exec_autocmds("User", { pattern = "PlumToggleMode", data = next_variant })
 end, {})
 
--- auto variant: vim.o.background の変化に追随して再ロード
 vim.api.nvim_create_autocmd("OptionSet", {
 	pattern = "background",
 	callback = function()

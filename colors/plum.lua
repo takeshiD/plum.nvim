@@ -1,1 +1,1 @@
-require("plum").load("auto")
+require("plum").load()

@@ -7,10 +7,6 @@ A high-contrast Neovim colorscheme inspired by the vivid colors of the **Japanes
   <h3>plum-light</h3><img src="assets/plum-light.png" alt="plum-light" style="border-radius:5%" />
 </div>
 
-## Variants
-
-- `plum-dark`
-- `plum-light`
 ## Requirements
 
 - Neovim 0.9+
@@ -22,14 +18,14 @@ A high-contrast Neovim colorscheme inspired by the vivid colors of the **Japanes
 
 ```lua
 {
-    "your-username/plum.nvim",
+    "takeshid/plum.nvim",
     lazy = false,
     priority = 1000,
     config = function()
         require("plum").setup({
-            -- options (all optional)
+            variant = "dark"
         })
-        vim.cmd("colorscheme plum-dark")
+        vim.cmd("colorscheme plum")
     end,
 }
 ```
@@ -37,8 +33,8 @@ A high-contrast Neovim colorscheme inspired by the vivid colors of the **Japanes
 ### vim-plug
 
 ```vim
-Plug 'your-username/plum.nvim'
-colorscheme plum-dark
+Plug 'takeshid/plum.nvim'
+colorscheme plum
 ```
 
 ## Configuration
@@ -47,6 +43,8 @@ Call `setup()` before applying the colorscheme. All options are optional.
 
 ```lua
 require("plum").setup({
+    -- Style
+    variant = "auto", -- default "auto", selectable: "dark" / "light"
     -- Replace bg with "NONE" for transparent backgrounds
     transparent = false,
 
@@ -104,30 +102,6 @@ require("plum").setup({
 })
 ```
 
-## Switching variants
-
-```vim
-" Apply directly
-:colorscheme plum-dark
-:colorscheme plum-light
-
-" Toggle with command
-:PlumToggleMode
-```
-
-```lua
--- Toggle programmatically
-vim.cmd("PlumToggleMode")
-
--- Listen for toggle events
-vim.api.nvim_create_autocmd("User", {
-    pattern = "PlumToggleMode",
-    callback = function(ev)
-        -- ev.data contains "dark" or "light"
-    end,
-})
-```
-
 ## Supported plugins
 
 | Plugin | Extension key |
@@ -155,7 +129,7 @@ vim.api.nvim_create_autocmd("User", {
 ```lua
 require("lualine").setup({
     options = {
-        theme = "plum-dark",
+        theme = "auto", -- auto detect colorscheme
     },
 })
 ```

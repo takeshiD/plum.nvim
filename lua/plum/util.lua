@@ -128,12 +128,13 @@ function M.syntax(syntax)
 end
 
 ---@param theme { highlights: table<string, table> }
-function M.load(theme)
+---@param colors_name? string
+function M.load(theme, colors_name)
     if vim.g.colors_name then
         vim.cmd("hi clear")
     end
     vim.o.termguicolors = true
-    vim.g.colors_name = "plum"
+    vim.g.colors_name = colors_name or "plum"
     M.syntax(theme.highlights)
 end
 

@@ -27,12 +27,8 @@
 ---@field light plum.Palette
 local M = {}
 
--- すもも皮（ピンクレッド 340°）を主軸に、補色・トライアドで体系化。
--- dark: 背景ほぼ純黒（紫下地）、アクセント彩度 90-100% の完全発色。
--- light: 背景ほぼ純白（温かみ）、アクセントは明度を下げて WCAG AA 確保。
 M.dark = {
     -- base
-    -- RGB の B チャンネルを R と近づけることで紫被りを抑え、ほぼ純黒に
     bg         = "#0A0101", -- Abyss Black      R13 G12 B14: ほぼ純黒・僅かな紫下地
     bg_alt     = "#151318", -- Ink Dark         R21 G19 B24: サイドバー・分割ペイン
     bg_float   = "#1D1B22", -- Deep Dark        R29 G27 B34: フロート・ポップアップ
@@ -59,8 +55,6 @@ M.dark = {
 
 M.light = {
     -- base
-    -- R>G>B の関係を保ちつつ B を抑えることでアイボリー系の温かみを演出
-    -- 旧値より各チャンネル約 8-12 引き下げ、ウォームパーチメント調に
     bg         = "#F7F2E2", -- Warm Parchment     R247 G242 B226: パーチメント調アイボリー
     bg_alt     = "#EDE4D2", -- Linen              R237 G228 B210: 温かいリネン
     bg_float   = "#F9F5E8", -- Ivory Float        R249 G245 B232: フロート（bg より僅かに明）
@@ -71,7 +65,7 @@ M.light = {
     cursorline = "#EEE5D2", -- Parchment Line     R238 G229 B210: bg より暗め・視認性確保
     border     = "#8A1850", -- Plum Wine          ウィンドウ枠
     comment    = "#8A6878", -- Dusty Mauve        コメント
-    -- accents (光背景で WCAG AA 確保のため明度を下げた版)
+    -- accents
     orange     = "#B85800", -- Burnt Flesh        28°
     yellow     = "#9A6400", -- Dark Gold          40°
     green      = "#0A8840", -- Forest Leaf        145°
