@@ -31,8 +31,8 @@ local plum = {
 		z = { fg = colors.jade,   bg = colors.bg },
 	},
 	replace = {
-		a = { fg = colors.bg,     bg = colors.jade},
-		b = { fg = colors.jade,   bg = colors.bg },
+		a = { fg = colors.bg,     bg = colors.cyan},
+		b = { fg = colors.cyan,   bg = colors.bg },
 		z = { fg = colors.jade,   bg = colors.bg },
 	},
 	terminal = {

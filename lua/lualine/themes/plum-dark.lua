@@ -21,6 +21,7 @@ local plum = {
 	},
 	visual = {
 		a = { fg = colors.fg, bg = colors.purple },
+		b = { fg = colors.purple, bg = colors.bg },
 		z = { fg = colors.jade, bg = colors.bg },
 	},
 	command = {
@@ -29,12 +30,13 @@ local plum = {
 		z = { fg = colors.jade, bg = colors.bg },
 	},
 	replace = {
-		a = { fg = colors.fg, bg = colors.jade },
-		b = { fg = colors.jade, bg = colors.bg },
+		a = { fg = colors.fg, bg = colors.cyan},
+		b = { fg = colors.cyan, bg = colors.bg },
 		z = { fg = colors.jade, bg = colors.bg },
 	},
 	terminal = {
 		a = { fg = colors.fg, bg = colors.green },
+		b = { fg = colors.green, bg = colors.bg },
 		z = { fg = colors.jade, bg = colors.bg },
 	},
 }
